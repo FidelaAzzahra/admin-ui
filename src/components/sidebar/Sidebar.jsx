@@ -1,11 +1,11 @@
 import "./sidebar.scss";
-import { Link } from "react-router-dom";
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import InventoryIcon from '@mui/icons-material/Inventory';
-import StoreIcon from '@mui/icons-material/Store';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { Link } from "react-router-dom"; 
+import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard'; //icon dashboard
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt'; //icon icon
+import InventoryIcon from '@mui/icons-material/Inventory'; //icon products
+import StoreIcon from '@mui/icons-material/Store'; //icon orders
+import AccountCircleIcon from '@mui/icons-material/AccountCircle'; //icon profile
+import ExitToAppIcon from '@mui/icons-material/ExitToApp'; //icon logout
 
 const Sidebar = () => {
   return (

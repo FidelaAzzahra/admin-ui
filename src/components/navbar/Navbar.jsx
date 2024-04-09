@@ -1,6 +1,6 @@
 import "./navbar.scss";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"; //icon search
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"; //icon theme
 
 const Navbar = () => {
   return (
