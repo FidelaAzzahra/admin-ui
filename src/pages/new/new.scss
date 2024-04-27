@@ -1,0 +1,30 @@
+.new {
+  display: flex;
+  width: 100%;
+
+  .newContainer {
+    flex: 6;
+
+    .top,
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px #ede6f5;
+      padding: 10px;
+      margin: 20px;
+      color: lightgray;
+      display: flex;
+
+      .left {
+        flex: 1;
+        text-align: center;
+        color: black;
+      }
+
+      .right {
+        flex: 2;
+        color: black;
+      }
+    }
+  }
+}
+
