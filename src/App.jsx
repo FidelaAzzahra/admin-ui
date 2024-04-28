@@ -25,7 +25,7 @@ function App() {
               />
             </Route>
 
-            <Route path="product">
+            <Route path="products">
               <Route index element={<List />}></Route>
               <Route path=":productId" element={<Single />}></Route>
               <Route path="new" 
