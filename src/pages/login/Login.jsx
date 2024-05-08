@@ -1,3 +1,4 @@
+// login untuk halaman login
 import "./login.scss";
 
 const Login = () => {

@@ -1,4 +1,5 @@
 import "./chart.scss";
+
 import {
   AreaChart,
   Area,
@@ -6,7 +7,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from "recharts";
+} from "recharts"; // import komponen dari chart
 
 const Chart = ({ type, aspect }) => {
   let listData;

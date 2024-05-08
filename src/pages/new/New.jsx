@@ -1,6 +1,7 @@
+// new untuk menambahkan data baru
 import "./new.scss";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Navbar from "../../components/navbar/Navbar";
+import Sidebar from "../../components/sidebar/Sidebar"; // panggil component sidebar 
+import Navbar from "../../components/navbar/Navbar"; // panggil component navbar 
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 

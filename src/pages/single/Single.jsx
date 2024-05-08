@@ -1,8 +1,9 @@
+// single untuk menampilkan satu data
 import "./single.scss";
-import Sidebar from "../../components/sidebar/Sidebar";
-import Navbar from "../../components/navbar/Navbar";
-import Chart from "../../components/chart/Chart";
-import List from "../../components/datatable/Datatable";
+import Sidebar from "../../components/sidebar/Sidebar"; // panggil component sidebar 
+import Navbar from "../../components/navbar/Navbar"; // panggil component navbar
+import Chart from "../../components/chart/Chart"; // import chart
+import List from "../../components/datatable/Datatable"; // import list yang berisi datatable
 
 const Single = () => {
   return (

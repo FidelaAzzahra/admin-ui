@@ -29,6 +29,7 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+
     case "order":
       data = {
         title: "ORDERS",
@@ -45,6 +46,7 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+
     case "earning":
       data = {
         title: "EARNINGS",
@@ -58,6 +60,7 @@ const Widget = ({ type }) => {
         ),
       };
       break;
+      
     case "balance":
       data = {
         title: "BALANCE",
@@ -87,6 +90,7 @@ const Widget = ({ type }) => {
         </div>
         <div className="link">{data.link}</div>
       </div>
+
       <div className="right">
         <div className="percentage positive">
           <KeyboardArrowUpIcon />
@@ -94,6 +98,7 @@ const Widget = ({ type }) => {
         </div>
         {data.icon}
       </div>
+      
     </div>
   );
 };

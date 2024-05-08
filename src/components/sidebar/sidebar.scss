@@ -4,6 +4,7 @@
     min-height: 100vh;
     background-color: white;
   
+    // logo
     .top {
       height: 50px;
       display: flex;
@@ -26,6 +27,7 @@
       text-decoration: none;
     }
   
+    // list menu
     .center {
       padding-left: 15px;
   
@@ -67,6 +69,7 @@
       }
     }
   
+    // bottom adalah pilihan nuansa tema
     .bottom {
       display: flex;
       align-items: center;
