@@ -18,6 +18,7 @@ const rows = [
   { id: 7, name: "Expresso"},
   { id: 8, name: "Thai Tea"},
   { id: 9, name: "Astor"},
+  { id: 10, name: "Americano"},
 ];
 
 const actionColumn = [
