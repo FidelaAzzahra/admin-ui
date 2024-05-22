@@ -1,5 +1,6 @@
-import React from "react";
 import "./mylist.scss";
+
+import React from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
@@ -11,10 +12,12 @@ const Mylist = () => {
       <Sidebar />
       <div className="listContainer">
         <Navbar />
+        
         <div className="widgets">
           <Widget type="user"/>
           <Widget type="order"/>
         </div>
+
         <Mydatatable/>
       </div>
     </div>

@@ -8,7 +8,13 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle'; //icon profil
 import ExitToAppIcon from '@mui/icons-material/ExitToApp'; //icon logout
 import CategoryIcon from '@mui/icons-material/Category'; // icone categories
 
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
+
 const Sidebar = () => {
+
+  const { dispatch } = useContext(DarkModeContext);
+
   return ( 
     <div className="sidebar"> 
 
@@ -64,8 +70,8 @@ const Sidebar = () => {
       </div>
 
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption" onClick={() => dispatch({type : "LIGHT"})}></div>
+        <div className="colorOption" onClick={() => dispatch({type : "DARK"})}></div>
       </div>
 
     </div>
