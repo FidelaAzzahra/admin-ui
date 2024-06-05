@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-  return <div>Login</div>;
+  return <div>Loginnnnns</div>;
 };
 
 export default Login;
