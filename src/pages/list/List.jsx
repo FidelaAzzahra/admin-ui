@@ -4,13 +4,13 @@ import Sidebar from "../../components/sidebar/Sidebar"; // panggil components si
 import Navbar from "../../components/navbar/Navbar"; // panggil components navbar
 import Datatable from "../../components/datatable/Datatable"; // panggil components datatable
 
-const List = () => {
+const List = ({columns}) => {
   return (
     <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
-        <Datatable />
+        <Datatable columns={columns}/>
       </div>
     </div>
   );
