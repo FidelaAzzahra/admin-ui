@@ -3,11 +3,11 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useEffect, useState } from "react";
-import { doc,serverTimestamp,setDoc } from "firebase/firestore";
+import { doc,serverTimestamp,setDoc, addDoc, collection} from "firebase/firestore";
 import { auth, db, storage } from "../../firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
@@ -15,6 +15,9 @@ const New = ({ inputs, title }) => {
   const [per, setPerc] = useState(null);
   
   const navigate = useNavigate();
+  const location = useLocation(); 
+  const type = location.pathname.split('/')[1]; 
+
 
   useEffect(() => {
     const uploadFile = () => {
@@ -67,15 +70,26 @@ const New = ({ inputs, title }) => {
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
-      const res = await createUserWithEmailAndPassword(
-        auth,
-        data.email,
-        data.password
-      );
-      await setDoc(doc(db, "users", res.user.uid), {
-        ...data,
-        timeStamp: serverTimestamp(),
-      });
+      switch (type) {
+        case "users":
+          const res = await createUserWithEmailAndPassword(
+            auth,
+            data.email,
+            data.password
+          );
+          await setDoc(doc(db, type, res.user.uid), {
+            ...data,
+            timeStamp: serverTimestamp(),
+          });
+          break; 
+        default:
+          await addDoc(collection(db, type), {
+            ...data,
+            timeStamp: serverTimestamp(),
+          });
+          break;
+      } 
+      
       navigate(-1)
     } catch (err) {
       console.log(err);
