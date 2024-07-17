@@ -35,6 +35,42 @@ const Widget = ({ type }) => {
       };
       break;
 
+      case "product":
+        data = {
+          title: "PRODUCTS",
+          isMoney: false,
+          link: "See all products",
+          query: "products",
+          icon: (
+            <PersonOutlinedIcon
+              className="icon"
+              style={{
+                color: "crimson",
+                backgroundColor: "rgba(255, 0, 0, 0.2)",
+              }}
+            />
+          ),
+        };
+        break;
+  
+      case "category":
+        data = {
+          title: "CATEGORIES",
+          isMoney: false,
+          link: "See all categories",
+          query: "categories",
+          icon: (
+            <PersonOutlinedIcon
+              className="icon"
+              style={{
+                color: "crimson",
+                backgroundColor: "rgba(255, 0, 0, 0.2)",
+              }}
+            />
+          ),
+        };
+        break;  
+
     case "order":
       data = {
         title: "ORDERS",

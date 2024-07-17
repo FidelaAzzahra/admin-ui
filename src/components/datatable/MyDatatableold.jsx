@@ -1,9 +1,10 @@
-import "./mydatatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
+import "./datatable.scss";
 import { Link } from "react-router-dom";
-import { useEffect,useState } from "react";
-import { collection,onSnapshot,deleteDoc,doc } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { collection, onSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
+
 
 const Mydatatable = () => {
   const [data, setData] = useState([]);
@@ -65,7 +66,7 @@ const Mydatatable = () => {
 
   return (
     <div className="mydatatable">
-      <div className="mydatatableTitle">
+      <div className="datatableTitle">
         CATEGORIES
         <Link to="/categories/new" className="link" data-testid="add-new">Add New</Link>
       </div>
