@@ -72,7 +72,7 @@ const New = ({ inputs, title }) => {
       const categoryData = { ...data, timeStamp: serverTimestamp() };
 
       if (imageUrl) {
-        categoryData.img = imageUrl; // Tambahkan img hanya jika ada
+        categoryData.img = imageUrl; // Untuk menambahkan image
       }
 
       if (type === "users") {

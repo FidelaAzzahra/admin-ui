@@ -82,5 +82,5 @@ export const categoriesInputs = [
     type: "text",
     placeholder: "Coffee",
   },
-  
+
 ];

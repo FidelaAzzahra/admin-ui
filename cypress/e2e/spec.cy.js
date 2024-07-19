@@ -21,14 +21,9 @@ describe('template spec', () => {
 
     cy.get('div.sidebar')
       .should('be.visible')   
-
-    //sidebar -> user
-    cy.get('[data-testid="users"]').click()  
-    cy.url().should('include', '/users'); //memastikan jika masuk ke halaman yg benar
-
-    //sidebar -> products
-    //cy.get('[data-testid="products"]').click()  
-    //cy.url().should('include', '/products'); //memastikan jika masuk ke halaman yg benar
-  
+    
+    //sidebar -> categories
+    cy.get('[data-testid="categories"]').click()  
+    cy.url().should('include', '/categories'); //memastikan jika masuk ke halaman yg benar
   })
 })

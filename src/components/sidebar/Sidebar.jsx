@@ -59,7 +59,7 @@ const Sidebar = () => {
             </li>
           </Link>
           <Link to="/products">
-            <li data-testid="products">
+            <li>
               <InventoryIcon className="icon"/>
               <span>Products</span>
             </li>
@@ -69,7 +69,7 @@ const Sidebar = () => {
             <span>Orders</span>
           </li>
           <Link to="/categories">
-            <li>
+            <li data-testid="categories">
               <CategoryIcon  className="icon"/>
               <span>Categories</span>
             </li>
