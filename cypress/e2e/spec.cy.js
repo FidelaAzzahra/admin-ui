@@ -33,10 +33,9 @@ describe('template spec', () => {
     cy.wait(3000) //tunggu selama 3 detik setelah menekan add new
 
     //menulis dessert pada placeholder yang ada
-    cy.get('input[placeholder="Coffe"]', {timeout: 10000})
-      .should('be.visible')
-      .type('Dessert')
-      .should('have.value', 'Dessert')
+    cy.get('input[placeholder="Coffee"]', {timeout: 10000}).should('be.visible')
+      .type('Appetizer')
+      .should('have.value', 'Appetizer')
 
     //menekan button send 
     cy.get('button[type="submit"]').click()  
