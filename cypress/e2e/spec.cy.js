@@ -23,7 +23,24 @@ describe('template spec', () => {
       .should('be.visible')   
     
     //sidebar -> categories
-    cy.get('[data-testid="categories"]').click()  
+    cy.get('[data-testid="categories"]', {timeout: 10000}).should('be.visible').click()  
+    cy.wait(5000); //tunggu 5 detik setelah masuk ke categories
     cy.url().should('include', '/categories'); //memastikan jika masuk ke halaman yg benar
+    cy.get('div.mydatatableTitle').contains('CATEGORIES')
+
+    //untuk klik tombol add new
+    cy.get('[data-testid="add-new"]').click()
+    cy.wait(3000) //tunggu selama 3 detik setelah menekan add new
+
+    //menulis dessert pada placeholder yang ada
+    cy.get('input[placeholder="Coffe"]', {timeout: 10000})
+      .should('be.visible')
+      .type('Dessert')
+      .should('have.value', 'Dessert')
+
+    //menekan button send 
+    cy.get('button[type="submit"]').click()  
+
+
   })
 })
